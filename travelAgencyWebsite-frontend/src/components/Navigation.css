@@ -1,69 +1,236 @@
 .logout-btn {
-    margin: 0 auto;
-    display: block !important;
+  margin: 0 auto;
+  display: block !important;
 }
 
 .logo {
-    width: 50px;
+  width: 50px;
 }
 
 #cartcount {
-    font-size: 10px;
-    background-color: red;
-    color: white;
-    padding: 2px 4px;
-    vertical-align: top;
-    margin-left: -8px;
-    border-radius: 50%;
-    margin-top: -5px;
+  font-size: 10px;
+  background-color: red;
+  color: white;
+  padding: 2px 4px;
+  vertical-align: top;
+  margin-left: -8px;
+  border-radius: 50%;
+  margin-top: -5px;
 }
 
 .badge {
-    padding-left: 9px;
-    padding-right: 9px;
-    border-radius: 9px;
+  padding-left: 9px;
+  padding-right: 9px;
+  border-radius: 9px;
 }
 
 .fa-shopping-cart {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .notifications-container {
-    padding: 20px;
-    max-height: 200px;
-    overflow-y: scroll;
-    border: 1px solid gray;
-    background-color: white;
-    width: 200px;
-    z-index: 99;
+  padding: 20px;
+  max-height: 200px;
+  overflow-y: scroll;
+  border: 1px solid gray;
+  background-color: white;
+  width: 200px;
+  z-index: 99;
 }
 
 .notification-read {
-    background-color: lightblue;
+  background-color: lightblue;
 }
 
 .notification-unread {
-    background-color: lightcoral;
+  background-color: lightcoral;
 }
 .fas[data-count] {
-    position: relative;
+  position: relative;
 }
 
 .fa-bell {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .fas[data-count]:after {
-    position: absolute;
-    right: -0.75em;
-    top: -0.75em;
-    content: attr(data-count);
-    padding: 0.5em;
-    border-radius: 10em;
-    line-height: 0.9em;
-    color: white;
-    background-color: red;
-    text-align: center;
-    min-width: 2em;
-    font: bold 0.4em sans-serif;
+  position: absolute;
+  right: -0.75em;
+  top: -0.75em;
+  content: attr(data-count);
+  padding: 0.5em;
+  border-radius: 10em;
+  line-height: 0.9em;
+  color: white;
+  background-color: red;
+  text-align: center;
+  min-width: 2em;
+  font: bold 0.4em sans-serif;
 }
+/* YourNavbar.css */
+
+.navbar {
+  background-color: 007bff; /* Set your preferred background color */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 15px;
+}
+
+.brand {
+  font-size: 1.5rem; /* Adjust the font size */
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #333; /* Set the text color */
+  margin-right: 15px; /* Add some spacing between nav items */
+}
+
+.nav-link:hover {
+  color: #007bff; /* Change the text color on hover */
+}
+
+.logout-btn {
+  margin-left: 15px; /* Add spacing to the logout button */
+}
+
+/* Add more styles as needed */
+
+/* CSS */
+.button-78 {
+  align-items: center;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: Eina01, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 14px;
+  margin: 0;
+  /* min-height: 64px; */
+  outline: none;
+  overflow: visible;
+  /* padding: 9px 16px; */
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  word-break: keep-all;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .button-78 {
+    padding: 19px 32px;
+  }
+}
+
+.button-78:before,
+.button-78:after {
+  border-radius: 80px;
+}
+
+.button-78:before {
+  background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.button-78:after {
+  background-color: initial;
+  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.button-78:hover:not(:disabled):before {
+  background: linear-gradient(
+    92.83deg,
+    rgb(255, 116, 38) 0%,
+    rgb(249, 58, 19) 100%
+  );
+}
+
+.button-78:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+  opacity: 0;
+}
+
+.button-78:active:not(:disabled) {
+  color: #ccc;
+}
+
+.button-78:active:not(:disabled):before {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+}
+
+.button-78:active:not(:disabled):after {
+  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.button-78:disabled {
+  cursor: default;
+  opacity: 0.24;
+}
+/* YourNavbar.css */
+
+/* Add a class to style the login button */
+.login-button {
+  margin-right: 15px; /* Add spacing between nav items */
+}
+
+/* Customize the button styling */
+.login-button .btn-primary {
+  background-color: #007bff; /* Set the background color */
+  border-color: #007bff; /* Set the border color */
+}
+
+.login-button .btn-primary:hover {
+  background-color: #0056b3; /* Change the background color on hover */
+  border-color: #0056b3; /* Change the border color on hover */
+  color: #fff; /* Change the text color on hover */
+}
+
+/* Add more styles as needed */

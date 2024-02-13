@@ -29,12 +29,12 @@ function OrdersPage() {
     }
 
     if (orders.length === 0) {
-        return <h1 className="text-center pt-3">No orders yet</h1>;
+        return <h1 className="text-center pt-3">No Bookings yet</h1>;
     }
 
     return (
         <Container>
-            <h1 className="text-center">Your orders</h1>
+            <h1 className="text-center">Your Bookings</h1>
             <Table responsive striped bordered hover>
                 <thead>
                     <tr>

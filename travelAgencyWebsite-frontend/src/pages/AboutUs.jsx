@@ -15,13 +15,13 @@ const AboutUsPage = () => {
         </Col>
         <Col md={6}>
           <p>
-            Welcome to XYZ Travel Agency! We are passionate about creating
+            Welcome to GlobewalkTravel Agency! We are passionate about creating
             unforgettable travel experiences for our clients. Our dedicated team
             of experts is committed to providing top-notch services and ensuring
             your journey is nothing short of extraordinary.
           </p>
           <p>
-            At XYZ Travel, we believe in the power of exploration and the joy of
+            At Globewalk Travel, we believe in the power of exploration and the joy of
             discovering new places. Whether you're seeking relaxation on a
             beautiful beach, an adventurous mountain trek, or a cultural city
             tour, we have the perfect travel packages for you.
@@ -32,7 +32,7 @@ const AboutUsPage = () => {
             create memories that last a lifetime.
           </p>
           <p>
-            Thank you for choosing XYZ Travel Agency. Let's embark on a journey
+            Thank you for choosing Globewalk Travel Agency. Let's embark on a journey
             together!
           </p>
         </Col>

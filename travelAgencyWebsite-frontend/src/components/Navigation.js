@@ -32,7 +32,7 @@ function Navigation() {
   }
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar expand="lg">
       <Container>
         <LinkContainer to="/">
           <Navbar.Brand>Travel Agency Website ✈️</Navbar.Brand>
@@ -46,10 +46,14 @@ function Navigation() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            {/* if no user */}
             {!user && (
               <LinkContainer to="/login">
-                <Nav.Link>Login</Nav.Link>
+                <Nav.Link>
+                  {" "}
+                  {/* <button class="button-78" role="button"> */}
+                  <Button variant="primary">Login</Button>
+                  {/* </button> */}
+                </Nav.Link>
               </LinkContainer>
             )}
             {user && !user.isAdmin && (
@@ -64,8 +68,6 @@ function Navigation() {
                 </Nav.Link>
               </LinkContainer>
             )}
-
-            {/* if user */}
             {user && (
               <>
                 <Nav.Link
@@ -73,77 +75,52 @@ function Navigation() {
                   onClick={handleToggleNotifications}
                 >
                   <i
-                    className="fas fa-bell"
+                    // className="fas fa-bell"
                     ref={bellRef}
                     data-count={unreadNotifications || null}
                   ></i>
                 </Nav.Link>
-                <NavDropdown title={`${user.email}`} id="basic-nav-dropdown">
-                  {user.isAdmin && (
-                    <>
-                      <LinkContainer to="/admin">
-                        <NavDropdown.Item>Dashboard</NavDropdown.Item>
-                      </LinkContainer>
-                      <LinkContainer to="/new-product">
-                        <NavDropdown.Item>Create Package</NavDropdown.Item>
-                      </LinkContainer>
-                    </>
-                  )}
-                  {!user.isAdmin && (
-                    <>
-                      <LinkContainer to="/cart">
-                        <NavDropdown.Item>Cart</NavDropdown.Item>
-                      </LinkContainer>
-                      <LinkContainer to="/orders">
-                        <NavDropdown.Item>My Bookings</NavDropdown.Item>
-                      </LinkContainer>
-                    </>
-                  )}
-
-                  <NavDropdown.Divider />
-                  <Button
-                    variant="danger"
-                    onClick={handleLogout}
-                    className="logout-btn"
+                <Button style={{ color: "white" }} variant="primary">
+                  <NavDropdown
+                    style={{ color: "white" }}
+                    title={`${user.email}`}
+                    id="basic-nav-dropdown"
                   >
-                    Logout
-                  </Button>
-                </NavDropdown>
+                    {user.isAdmin && (
+                      <>
+                        <LinkContainer to="/admin">
+                          <NavDropdown.Item>Dashboard</NavDropdown.Item>
+                        </LinkContainer>
+                        <LinkContainer to="/new-product">
+                          <NavDropdown.Item>Create Package</NavDropdown.Item>
+                        </LinkContainer>
+                      </>
+                    )}
+                    {!user.isAdmin && (
+                      <>
+                        <LinkContainer to="/cart">
+                          <NavDropdown.Item>Cart</NavDropdown.Item>
+                        </LinkContainer>
+                        <LinkContainer to="/orders">
+                          <NavDropdown.Item>My Bookings</NavDropdown.Item>
+                        </LinkContainer>
+                      </>
+                    )}
+                    <NavDropdown.Divider />
+                    <Button
+                      variant="danger"
+                      onClick={handleLogout}
+                      className="logout-btn"
+                    >
+                      Logout
+                    </Button>
+                  </NavDropdown>
+                </Button>
               </>
             )}
           </Nav>
         </Navbar.Collapse>
       </Container>
-      {/* notifications */}
-      {/* <div
-        className="notifications-container"
-        ref={notificationRef}
-        style={{
-          position: "absolute",
-          top: bellPos.top + 30,
-          left: bellPos.left,
-          display: user && user.notifications ? "block" : "none",
-        }}
-      >
-        {user?.notifications && user.notifications.length > 0 ? (
-          user.notifications.map((notification) => (
-            <p
-              className={`notification-${notification.status}`}
-              key={notification.id}
-            >
-              {notification.message}
-              <br />
-              <span>
-                {notification.time.split("T")[0] +
-                  " " +
-                  notification.time.split("T")[1]}
-              </span>
-            </p>
-          ))
-        ) : (
-          <p>No notifications yet</p>
-        )}
-      </div> */}
     </Navbar>
   );
 }

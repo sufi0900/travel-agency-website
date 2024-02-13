@@ -1,5 +1,5 @@
 .signup__image--container {
-  background-image: url(https://t4.ftcdn.net/jpg/01/19/11/55/360_F_119115529_mEnw3lGpLdlDkfLgRcVSbFRuVl6sMDty.jpg);
+  background-image: url("https://res.cloudinary.com/drhxwooxk/image/upload/v1707809970/WhatsApp_Image_2024-02-13_at_12.36.30_PM_rnpcn3.jpg");
   height: 100vh;
   background-size: cover;
 }
@@ -14,7 +14,7 @@
 }
 
 .login__image--container {
-  background-image: url(https://thumbs.dreamstime.com/z/login-page-29496638.jpg);
+  background-image: url("https://res.cloudinary.com/drhxwooxk/image/upload/v1707809969/WhatsApp_Image_2024-02-13_at_12.36.30_PM_1_qzg7m4.jpg");
   height: 100vh;
   background-size: cover;
 }

@@ -9,29 +9,17 @@ function Signup() {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [signup, { error, isLoading, isError }] = useSignupMutation();
-  const [profilePic, setProfilePic] = useState(null);
 
   function handleSignup(e) {
     e.preventDefault();
-
-    const formData = new FormData();
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("password", password);
-    formData.append("profilePic", profilePic);
-
-    signup(formData);
+    signup({ name, email, password });
   }
 
   return (
     <Container>
       <Row>
         <Col md={6} className="signup__form--container">
-          <Form
-            style={{ width: "100%" }}
-            onSubmit={handleSignup}
-            enctype="multipart/form-data"
-          >
+          <Form style={{ width: "100%" }} onSubmit={handleSignup}>
             <h1>Create an account</h1>
             {isError && <Alert variant="danger">{error.data}</Alert>}
             <Form.Group>
@@ -64,15 +52,6 @@ function Signup() {
                 value={password}
                 required
                 onChange={(e) => setPassword(e.target.value)}
-              />
-            </Form.Group>
-            {/* Add profile picture upload input */}
-            <Form.Group>
-              <Form.Label>Profile Picture</Form.Label>
-              <Form.Control
-                type="file"
-                accept="image/*"
-                onChange={(e) => setProfilePic(e.target.files[0])}
               />
             </Form.Group>
 
